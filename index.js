@@ -86,10 +86,17 @@ async function handleRequest(request) {
   console.log(path)
   if(!path){
 
-    const html= await fetch("https://cdn.jsdelivr.net/gh/51sec/Url-Shorten-By-CF-Worker@main/index.html")
-/****customized index.html at main branch, easier to edit it****/
     
-    return new Response(await html.text(), {
+/**** Below link shoud Chang to Current GH Repo ****/ 
+
+/*** From: ****/
+/*** const html= await fetch("https://cdn.jsdelivr.net/gh/51sec/Url-Shorten-By-CF-Worker@main/index.html") ****/
+
+/**** To: ****/
+const html= await fetch("https://cdn.jsdelivr.net/gh/Sukanthan/shortlink@main/index.html")
+ 
+ 
+  return new Response(await html.text(), {
     headers: {
       "content-type": "text/html;charset=UTF-8",
     },
